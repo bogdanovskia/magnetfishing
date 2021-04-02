@@ -390,6 +390,11 @@ footer.main-footer {
   textarea {
     resize: none;
   }
+
+  .input-info{
+    margin-top: 8px;
+    color: rgba($color: $text-color, $alpha: .5);
+  }
 }
 
 .pagination {
@@ -450,3 +455,23 @@ footer.main-footer {
     }
   }
 }
+
+//tags css start
+.tagify__tag > div::before {
+  box-shadow: 0 0 0 3em #e5e5e5 inset;
+}
+
+.tagify__tag:hover:not([readonly]) div::before {
+  box-shadow: 0 0 0 3em #d3e2e2 inset;
+}
+
+.tagify__tag__removeBtn:hover+div::before {
+  box-shadow: 0 0 0 3em rgba(211,148,148,.3) inset!important;
+}
+
+.tagify__input:empty::before{
+  line-height: 26px;
+}
+
+
+//tags css end

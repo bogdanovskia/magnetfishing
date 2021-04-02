@@ -2323,6 +2323,11 @@ footer.main-footer .footer-signup p {
   resize: none;
 }
 
+#add-post .input-info {
+  margin-top: 8px;
+  color: rgba(7, 7, 7, 0.5);
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2390,5 +2395,24 @@ footer.main-footer .footer-signup p {
 
 .pagination__btn.active:hover {
   color: #100082;
+}
+
+.tagify__tag > div::before {
+  -webkit-box-shadow: 0 0 0 3em #e5e5e5 inset;
+          box-shadow: 0 0 0 3em #e5e5e5 inset;
+}
+
+.tagify__tag:hover:not([readonly]) div::before {
+  -webkit-box-shadow: 0 0 0 3em #d3e2e2 inset;
+          box-shadow: 0 0 0 3em #d3e2e2 inset;
+}
+
+.tagify__tag__removeBtn:hover + div::before {
+  -webkit-box-shadow: 0 0 0 3em rgba(211, 148, 148, 0.3) inset !important;
+          box-shadow: 0 0 0 3em rgba(211, 148, 148, 0.3) inset !important;
+}
+
+.tagify__input:empty::before {
+  line-height: 26px;
 }
 /*# sourceMappingURL=main.css.map */
