@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Magnet Fishing</title>
+  <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <nav class="navigation bordered">
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="nav-container">
+      <a href="index.html" id="logo">
+        <img src="img/logo.png" alt="Magnet Fishing Logo">
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        <li>
+          <a href="findmap.html">USA Find Map</a>
+        </li>
+        <li>
+          <a href="#">Our Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="nav-socials">
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-google-plus-g"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <div id="signup-form">
+    <div class="form-cont">
+      <div class="form-title">
+        <h4>JOIN THE COMMUNITY</h4>
+        <h2>Subscribe Now</h2>
+      </div>
+      <div class="input-cont">
+        <div class="input-control">
+          <i class="far fa-envelope"></i>
+          <input type="email" placeholder="Enter your email address...">
+        </div>
+        <button type="submit" class="submit-btn">Sign Up Now</button>
+      </div>
+    </div>
+  </div> -->
+
+  <section id="add-post">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="alert alert-primary" role="alert">
+            <h4>You can't post because you are not subscribed</h4>
+            Please subscribe to the form below you can add posts of your findings.
+            <form action="" class="subscribe-form">
+              <div class="input-cont">
+                <div class="input-control">
+                  <i class="far fa-envelope"></i>
+                  <input type="email" placeholder="Enter your email address...">
+                </div>
+                <button type="submit" class="submit-btn">Sign Up Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Add New Post</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 col-md-6 order-2 order-md-1">
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Upload your finding image</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" class="form-control form-control-lg" id="post-title" placeholder="Enter title...">
+            </div>
+
+            <div class="form-group">
+              <label for="desc">Description:</label>
+              <textarea class="form-control form-control-lg" id="desc" rows="5"
+                placeholder="Enter description..."></textarea>
+            </div>
+            <input id="lat" type="hidden" name="lat">
+            <input id="lng" type="hidden" name="lng">
+            <input class="primary-button" type="submit" value="Submit Now" name="submit">
+          </form>
+        </div>
+        <div class="col-md-6 offset-lg-1 offset-md-0 order-1 order-md-2">
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13004069.896900944!2d-104.65611544442767!3d37.27565371492453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2smk!4v1614540494877!5m2!1sen!2smk"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <img src="img/logo.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Community</a>
+            </li>
+            <li>
+              <a href="#">USA Find Map</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Cookies</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-signup">
+            <h2>REady to get started?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipis elit.</p>
+            <a href="#" class="secondary-button">Sign Up For FREE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer-bottom">
+        <div class="col-lg-12">
+          <hr>
+        </div>
+        <div class="col">
+          <p>
+            &copy; Copyright 2021 Magnet Fishing. All rights reserved.
+          </p>
+        </div>
+        <div class="col">
+          <ul class="footer-socials">
+            <li>
+              Stay In Touch:
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

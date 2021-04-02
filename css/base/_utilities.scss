@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+section, .main-footer{
+    padding: 100px 160px;
+    overflow: hidden;
+
+    @media screen and (min-width: 2000px){
+        padding: 100px 15%;
+    }
+
+    @media screen and (max-width: $tablet){
+        padding: 100px 40px;
+    }
+
+    @media screen and (max-width: $mobile){
+        padding: 100px 24px;
+    }
+}
+
+.half-width-wrapper{
+    //width: 50vw;
+    padding-left: 54vw;
+    padding-right: 4vw;
+    padding-top: 10vw;
+    position: relative;
+
+    @media screen and (max-width: $mobile){
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0;
+    }
+}
+
+.img-responsive{
+    max-width: 100%;
+}
+
+
+//Gutter classes
+.gutter-50{
+    padding: 25px 0;
+}
+.gutter-100{
+    padding: 50px 0;
+}

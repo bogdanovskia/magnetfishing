@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Eastman";
+  src: url("../fonts/EastmanTrial-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eastman";
+  src: url("../fonts/EastmanTrial-Bold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eastman";
+  src: url("../fonts/EastmanTrial-Extrabold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+$main-font: "Hind", sans-serif;
+$title-font: "Eastman", "Helvetica", sans-serif;
+
+:root {
+  font-size: 62.5%;
+  body {
+    font-family: $main-font;
+    // Body font size 16px
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 90%;
+  }
+}
+
+.title{
+  margin-bottom: 42px;
+  h1{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 0;
+    line-height: 5.2rem;
+    
+    span{
+      color: $primary-color;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 6rem;
+      margin-left: 6px;
+    }
+  }
+
+  h4{
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-top: 4px;
+  }
+
+  @media screen and (max-width: 1269px){
+    h1{
+      font-size: 3.2rem;
+      line-height: 3rem;
+    }
+
+    h4{
+      margin-top: 12px;
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $title-font;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  small{
+    font-size: 5rem;
+  }
+}
+
+h2{
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 2.4rem;
+}
+
+h4{
+  font-size: 1.8rem;
+}
+
+h5{
+  font-size: 1.4rem;
+}
+
+h6{
+  font-size: 1.2rem;
+}
+
+p{
+  color: $text-color;
+  font-size: 1.6rem;
+  margin: 20px 0;
+}

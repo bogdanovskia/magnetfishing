@@ -1,0 +1,211 @@
+#hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  background-color: #fff;
+  position: relative;
+  // background-image: url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 160px;
+  grid-template-columns: 1fr 1fr;
+
+  // .overlay{
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   background-color: rgba(20, 20, 20, 0.3);
+  // }
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 22%;
+    background-color: $primary-color;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    background-color: $secondary-color;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .embed-responsive {
+    z-index: 600;
+    border-radius: 8px;
+    position: relative;
+    @include transition(0.4s);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s;
+
+    .play-button {
+      position: absolute;
+      margin: auto;
+      text-align: center;
+      cursor: pointer;
+      z-index: 700;
+
+      .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: $secondary-color;
+        text-align: center;
+        margin: auto;
+        @include transition(1s);
+
+        i {
+          color: #fff;
+          line-height: 80px;
+          font-size: 2.4rem;
+          transform: translateX(3px);
+          -webkit-transform: translateX(3px);
+        }
+      }
+
+      h4 {
+        margin-top: 24px;
+      }
+
+      &:hover {
+        .circle {
+          background-color: $secondary-color-hover;
+        }
+      }
+    }
+
+    iframe {
+      transform: translateX(120%);
+      -webkit-transform: translateX(120%);
+      @include transition(0.7s);
+    }
+
+    &.show-video {
+      box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.18);
+      .play-button {
+        display: none;
+        opacity: 0;
+      }
+      iframe {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 500;
+    flex-basis: 60%;
+    color: #fff;
+    z-index: 100;
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   height: 180px;
+    //   width: 180px;
+    //   background-image: url('../img/dots.png');
+    //   background-repeat: no-repeat;
+    //   top: -80px;
+    //   left: -100px;
+    // }
+
+    h1 {
+      font-size: 3.2vw;
+      letter-spacing: 0.2rem;
+      color: $black;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 2.4rem;
+      letter-spacing: 0.8rem;
+      margin-bottom: 12px;
+      color: $secondary-color;
+    }
+
+    p {
+      color: $text-color;
+      margin: 12px 0;
+      font-size: 2.4rem;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    padding: 100px 250px;
+  }
+
+  @media screen and (max-width: 1269px) {
+    padding: 100px 80px;
+    height: auto;
+    min-height: auto;
+    .content {
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 140px 40px;
+    padding-top: 160px;
+
+    &:after {
+      content: none;
+      display: none;
+    }
+
+    .content {
+      margin-bottom: 32px;
+      width: 100%;
+      text-align: center;
+
+      h4 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 140px 40px;
+    padding-top: 160px;
+
+    &:after {
+      content: none;
+      display: none;
+    }
+
+    .content {
+      h1 {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}

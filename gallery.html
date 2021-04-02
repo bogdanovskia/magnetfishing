@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Magnet Fishing | Gallery</title>
+  <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <nav class="navigation notabsolute bordered">
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="nav-container">
+      <a href="index.html" id="logo">
+        <img src="img/logo.png" alt="Magnet Fishing Logo">
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        <li>
+          <a href="findmap.html">USA Find Map</a>
+        </li>
+        <li>
+          <a href="#">Our Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="nav-socials">
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-google-plus-g"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <h3>Gallery</h3>
+  <a href="add-post.html" class="primary-button">Post New Find</a> -->
+  <div class="toolbar">
+    <div class="left-part">
+      <h3>Gallery</h3>
+      <a href="add-post.html" class="primary-button">Post New Find</a>
+    </div>
+    <div class="search-wrapper">
+      <div class="input-wrapper">
+        <img src="img/search-icon.png" alt="search" class="search-icon">
+        <input type="text" name="tag-search" id="tag-search" placeholder="Search by tag">
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+    <div class="right-part">
+      <h4>Filters</h4>
+      <div class="filter-topfinds">
+        <ul>
+          <li>Top Finds of:</li>
+          <li class="today-filter filter-button">Today</li>
+          <li>|</li>
+          <li class="week-filter filter-button">Past Week</li>
+          <li>|</li>
+          <li class="year-filter filter-button">Past Year</li>
+          <li>|</li>
+          <li class="alltime-filter filter-button">All Time</li>
+        </ul>
+      </div>
+      <div class="filter-objects">
+        <p>Top</p>
+        <p class="select"><select class="budget">
+            <option value="" selected disabled>Select Object</option>
+            <option value="0">Gun</option>
+            <option value="1">Bike</option>
+          </select></p>
+        <p>finds</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-post" data-toggle="modal" data-target="#postModal">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal1.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal2.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal3.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal4.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/img1.png" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/img2.png" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal1.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal2.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal3.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal4.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/img1.png" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/img2.png" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal1.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal2.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal3.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/gal4.jpg" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/img1.png" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+    <div class="gallery-post">
+      <div class="overlay"></div>
+      <div class="img-cont">
+        <img src="img/img2.png" class="post-img" alt="">
+      </div>
+      <footer class="info">
+        <h4 class="post-title">
+          Some post random title
+        </h4>
+        <h5 class="date">
+          12/02/2020
+        </h5>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <img src="img/logo.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Community</a>
+            </li>
+            <li>
+              <a href="#">USA Find Map</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Cookies</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-signup">
+            <h2>REady to get started?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipis elit.</p>
+            <a href="#" class="secondary-button">Sign Up For FREE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer-bottom">
+        <div class="col-lg-12">
+          <hr>
+        </div>
+        <div class="col">
+          <p>
+            &copy; Copyright 2021 Magnet Fishing. All rights reserved.
+          </p>
+        </div>
+        <div class="col">
+          <ul class="footer-socials">
+            <li>
+              Stay In Touch:
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="left-side">
+            <h4 class="modal-title" id="postModalTitle">Post name goes here</h4>
+            <h5 class="date">12/03/2021</h5>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13004069.896900944!2d-104.65611544442767!3d37.27565371492453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2smk!4v1614540494877!5m2!1sen!2smk"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="modal-img-cont">
+            <img src="img/gal2.jpg" alt="">
+          </div>
+
+          <div class="description-cont">
+            <p class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum dolor non turpis lobortis,
+              non rhoncus metus maximus.
+            </p>
+            
+            <ul class="tags">
+              <li><a href="#" class="tag">HTML</a></li>
+              <li><a href="#" class="tag">CSS</a></li>
+              <li><a href="#" class="tag">JavaScript</a></li>
+            </ul>
+
+            <button class="view-location"><i class="fa fa-map-marker"></i>View Location</button>
+          </div>
+        </div>
+        <!-- <div class="modal-footer"></div> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.view-location').click(function () {
+        $('#postModal .map-responsive').addClass('opened');
+      });
+
+      $('#postModal').on('hidden.bs.modal', function (e) {
+        $('#postModal .map-responsive').removeClass('opened');
+        //we remove all modal content here
+      })
+    });
+  </script>
+</body>
+
+</html>
