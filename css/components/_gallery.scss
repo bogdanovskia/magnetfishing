@@ -122,6 +122,35 @@
       height: 530px;
     }
   }
+
+  @media screen and (max-width: $tablet){
+    padding-left: 40px;
+
+    .home-gallery-header{
+      padding-right: 40px;
+    }
+
+    .frame li {
+      width: 270px;
+      height: 270px;
+    }
+
+    .scrollbar{
+      width: calc(100% - 40px)!important;
+    }
+  }
+
+  @media screen and (max-width: $mobile){
+    .home-gallery-header{
+      padding-right: 20px;
+    }
+
+    .frame li {
+      width: 180px;
+      height: 180px;
+      margin: 0 16px 0 0;
+    }
+  }
 }
 
 .headings {

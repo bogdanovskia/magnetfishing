@@ -150,6 +150,10 @@
       }
     }
   }
+
+  @media screen and (max-width: $tablet) {
+    margin: 32px 0;
+  }
 }
 
 .posts-wrapper {
@@ -280,6 +284,7 @@
         vertical-align: middle;
         padding: 4px 10px;
         padding-bottom: 2px;
+        margin-bottom: 16px;
         text-transform: uppercase;
         display: inline-block;
         flex-grow: 0;
@@ -317,6 +322,19 @@
           transform: scale(1.05);
           -webkit-transform: scale(1.05);
         }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      grid-template-rows: auto;
+    }
+
+    @media screen and (max-width: $mobile) {
+      grid-template-columns: 1fr;
+
+      .img-cont {
+        width: 100%;
+        padding-top: 75%;
       }
     }
   }

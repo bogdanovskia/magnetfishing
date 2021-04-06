@@ -46,6 +46,10 @@
       right: -68px;
       bottom: -68px;
     }
+
+    @media screen and (max-width: $tablet){
+      margin-top: 32px;
+    }
   }
 }
 
@@ -96,7 +100,6 @@
 
 #home-map {
   width: 100%;
-  background-color: #ededed;
   padding-top: 38.7%;
   position: relative;
 
@@ -139,6 +142,24 @@
 
     img {
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1366px){
+    .home-map-cont{
+      top: -90px;
+    }
+  }
+
+  @media screen and (max-width: $mobile){
+    padding: 0;
+    .home-map-cont{
+      position: static;
+      padding: 0 80px;
+    }
+    .map-cont{
+      position: static;
+      margin-bottom: 40px;
     }
   }
 }
@@ -194,11 +215,22 @@
         height: 68px;
         line-height: 69px;
         margin-left: 12px;
+        flex-shrink: 0!important;
+        outline: none!important;
         @include transition(0.3s);
 
         &:hover,
         &:focus {
           background-color: $primary-color-dark;
+        }
+      }
+
+      @media screen and (max-width: 1000px){
+        flex-direction: column;
+
+        .submit-btn{
+          margin: 0;
+          margin-top: 12px;
         }
       }
     }
@@ -221,6 +253,27 @@
         margin: 0;
         margin-bottom: 8px;
       }
+    }
+  }
+
+  @media screen and (max-width: $mobile){
+    padding: 0 32px;
+    .form-cont{
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 24px;
+
+      .input-cont{
+        width: 100%;
+      }
+
+      .form-title{
+        margin: 0;
+        margin-bottom: 32px;
+      }
+
+
     }
   }
 }
@@ -328,16 +381,17 @@ footer.main-footer {
 
 #add-post {
   .subscribe-form {
-    max-width: 700px;
     .input-cont {
       position: relative;
       flex-grow: 2;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
+      flex-wrap: wrap;
 
       .input-control {
         position: relative;
-        width: 100%;
+        max-width: 600px;
+        flex-grow: 1;
         i {
           position: absolute;
           color: $secondary-color;
@@ -368,6 +422,15 @@ footer.main-footer {
         &:hover,
         &:focus {
           background-color: $primary-color-dark;
+        }
+      }
+
+      @media screen and (max-width: $mobile){
+        flex-direction: column;
+
+        .submit-btn{
+          margin: 0;
+          margin-top: 16px;
         }
       }
     }
