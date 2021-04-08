@@ -2546,4 +2546,8 @@ footer.main-footer .footer-signup p {
 .tagify__input:empty::before {
   line-height: 26px;
 }
+
+.ui-autocomplete {
+  z-index: 999;
+}
 /*# sourceMappingURL=main.css.map */
