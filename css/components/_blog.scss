@@ -103,7 +103,7 @@
     }
 
     .blogpost-badge {
-      color: #fff;
+      color: #fff !important;
       background-color: $secondary-color;
       font-weight: 600;
       font-size: 1.6rem;
@@ -116,6 +116,10 @@
       top: 16px;
       left: 16px;
       z-index: 500;
+
+      a {
+        color: #fff !important;
+      }
     }
   }
 
@@ -276,7 +280,7 @@
       }
 
       .blogpost-badge {
-        color: #fff;
+        color: #fff !important;
         background-color: $primary-color-dark;
         font-weight: 600;
         font-size: 1.6rem;
@@ -289,6 +293,10 @@
         display: inline-block;
         flex-grow: 0;
         flex-shrink: 0;
+
+        a {
+          color: #fff !important;
+        }
       }
 
       p {
@@ -392,8 +400,9 @@
     }
 
     img {
-      width: 100%;
+      width: 100%!important;
       margin: 32px 0;
+      height: auto!important;
     }
   }
 
@@ -412,7 +421,7 @@
       color: rgba($color: $secondary-color-hover, $alpha: 0.9);
     }
     .blogpost-badge {
-      color: #fff;
+      color: #fff !important;
       background-color: $secondary-color;
       font-weight: 600;
       font-size: 1.6rem;
@@ -422,6 +431,10 @@
       padding-bottom: 2px;
       text-transform: uppercase;
       display: inline-block;
+
+      a {
+        color: #fff !important;
+      }
     }
     .author {
       display: flex;

@@ -1214,7 +1214,7 @@ section, .main-footer {
 }
 
 .blogpost-card .img-box .blogpost-badge {
-  color: #fff;
+  color: #fff !important;
   background-color: #FE0853;
   font-weight: 600;
   font-size: 1.6rem;
@@ -1227,6 +1227,10 @@ section, .main-footer {
   top: 16px;
   left: 16px;
   z-index: 500;
+}
+
+.blogpost-card .img-box .blogpost-badge a {
+  color: #fff !important;
 }
 
 .blogpost-card:hover, .blogpost-card:focus {
@@ -1414,7 +1418,7 @@ section, .main-footer {
 }
 
 .posts-wrapper .featured-post-big .content .blogpost-badge {
-  color: #fff;
+  color: #fff !important;
   background-color: #100082;
   font-weight: 600;
   font-size: 1.6rem;
@@ -1430,6 +1434,10 @@ section, .main-footer {
           flex-grow: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.posts-wrapper .featured-post-big .content .blogpost-badge a {
+  color: #fff !important;
 }
 
 .posts-wrapper .featured-post-big .content p {
@@ -1535,8 +1543,9 @@ section, .main-footer {
 }
 
 .blog-post-wrapper .post-content img {
-  width: 100%;
+  width: 100% !important;
   margin: 32px 0;
+  height: auto !important;
 }
 
 .blog-post-wrapper .post-header {
@@ -1558,7 +1567,7 @@ section, .main-footer {
 }
 
 .blog-post-wrapper .post-header .blogpost-badge {
-  color: #fff;
+  color: #fff !important;
   background-color: #FE0853;
   font-weight: 600;
   font-size: 1.6rem;
@@ -1568,6 +1577,10 @@ section, .main-footer {
   padding-bottom: 2px;
   text-transform: uppercase;
   display: inline-block;
+}
+
+.blog-post-wrapper .post-header .blogpost-badge a {
+  color: #fff !important;
 }
 
 .blog-post-wrapper .post-header .author {
