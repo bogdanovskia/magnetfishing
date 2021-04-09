@@ -123,10 +123,10 @@
     }
   }
 
-  @media screen and (max-width: $tablet){
+  @media screen and (max-width: $tablet) {
     padding-left: 40px;
 
-    .home-gallery-header{
+    .home-gallery-header {
       padding-right: 40px;
     }
 
@@ -135,13 +135,13 @@
       height: 270px;
     }
 
-    .scrollbar{
-      width: calc(100% - 40px)!important;
+    .scrollbar {
+      width: calc(100% - 40px) !important;
     }
   }
 
-  @media screen and (max-width: $mobile){
-    .home-gallery-header{
+  @media screen and (max-width: $mobile) {
+    .home-gallery-header {
       padding-right: 20px;
     }
 
@@ -286,6 +286,90 @@
     background-color: #ededed;
     cursor: pointer;
     overflow: hidden;
+
+    .admin-options {
+      position: absolute;
+      z-index: 600;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      padding: 16px;
+
+      .hot-post {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        h4 {
+          margin: 0;
+          color: #fff;
+        }
+
+        .hot-toggle {
+          background-color: #ededed;
+          margin-left: 16px;
+          width: 72px;
+          height: 40px;
+          border-radius: 100px;
+          padding: 2px;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+
+          .circle {
+            width: 36px;
+            height: 36px;
+            background-color: #dadada;
+            border-radius: 100%;
+            text-align: center;
+            @include transition(0.3s);
+            flex-shrink: 0;
+            flex-grow: 0;
+            position: relative;
+
+            i {
+              line-height: 36px;
+              color: #999;
+            }
+
+            &:after{
+              content: 'OFF';
+              position: absolute;
+              right: -26px;
+              font-size: 12px;
+              color: #999;
+              top: 10px;
+              font-weight: 500;
+            }
+
+            &:before{
+              content: 'ON';
+              position: absolute;
+              left: -26px;
+              font-size: 12px;
+              color: #fff;
+              top: 10px;
+              font-weight: 500;
+            }
+          }
+
+          &.on {
+            background-color: #f9ab55;
+
+            .circle {
+              transform: translateX(32px);
+              -webkit-transform: translateX(32px);
+              background-color: #fff;
+
+              i {
+                color: #f58a07;
+              }
+            }
+          }
+        }
+      }
+    }
 
     .overlay {
       position: absolute;
@@ -641,9 +725,10 @@
       position: relative;
       margin: 0 10px 10px 0;
       text-decoration: none;
-      @include transition(.2s);
+      @include transition(0.2s);
 
-      &:hover, &:focus{
+      &:hover,
+      &:focus {
         background-color: $secondary-color;
         color: #fff;
       }

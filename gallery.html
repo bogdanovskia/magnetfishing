@@ -11,7 +11,7 @@
     integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -113,6 +113,16 @@
 
   <div class="gallery-grid">
     <div class="gallery-post" data-toggle="modal" data-target="#postModal">
+      <div class="admin-options">
+        <div class="hot-post">
+          <h4>Hot Post:</h4>
+          <div class="hot-toggle on">
+            <div class="circle">
+              <i class="fa fa-fire"></i>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="overlay"></div>
       <div class="img-cont">
         <img src="img/gal1.jpg" class="post-img" alt="">
@@ -127,6 +137,16 @@
       </footer>
     </div>
     <div class="gallery-post">
+      <div class="admin-options">
+        <div class="hot-post">
+          <h4>Hot Post:</h4>
+          <div class="hot-toggle">
+            <div class="circle">
+              <i class="fa fa-fire"></i>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="overlay"></div>
       <div class="img-cont">
         <img src="img/gal2.jpg" class="post-img" alt="">
@@ -548,7 +568,21 @@
       $('#postModal').on('hidden.bs.modal', function (e) {
         $('#postModal .map-responsive').removeClass('opened');
         //we remove all modal content here
-      })
+      });
+
+      $(".admin-options").click(function (e) {
+        // Do something
+        e.stopPropagation();
+      });
+
+      $(".hot-toggle").click(function () {
+        if (!$(this).hasClass("on")) {
+          $(this).addClass("on");
+        }
+        else {
+          $(this).removeClass("on");
+        }
+      });
     });
   </script>
 </body>
