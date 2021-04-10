@@ -11,6 +11,7 @@
     integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/@yaireo/tagify/dist/tagify.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -77,50 +78,29 @@
       <a href="add-post.html" class="primary-button">Post New Find</a>
     </div>
     <div class="search-wrapper">
-      <div class="search-tabs">
-        <div class="search-tab active" value="tagsearch">
-          <h4>Search by Tag</h4>
+      <h4>Search by Tags</h4>
+      <div class="search-grid">
+        <div class="tags-group">
+          <input name='tags' placeholder='please type your tags'>
+          <h5 class="input-info">Enter the tags separated with coma, or hit SPACE or ENTER</h5>
         </div>
-        <div class="search-tab" value="objectsearch">
-          <h4>Search by Object</h4>
+        <div class="button-wrapper">
+          <button class="search-btn">
+            <img src="img/search-icon.png" alt=""> <span>Search</span>
+          </button>
         </div>
-      </div>
-      <div class="input-wrapper tag-input-wrapper active">
-        <img src="img/search-icon.png" alt="search" class="search-icon">
-        <h4 class="tag-sign">#</h4>
-        <input type="text" name="tag-search" id="tag-search" placeholder="Search by tag">
-        <button class="search-btn">Search</button>
-      </div>
-
-      <div class="input-wrapper object-input-wrapper">
-        <img src="img/search-icon.png" alt="search" class="search-icon">
-        <input type="text" name="object-search" id="object-search" placeholder="Search by object">
-        <button class="search-btn">Search</button>
       </div>
     </div>
     <div class="right-part">
       <h4>Filters</h4>
-      <div class="filter-topfinds">
-        <ul>
-          <li>Top Finds of:</li>
-          <li class="today-filter filter-button">Today</li>
-          <li>|</li>
-          <li class="week-filter filter-button">Past Week</li>
-          <li>|</li>
-          <li class="year-filter filter-button">Past Year</li>
-          <li>|</li>
-          <li class="alltime-filter filter-button">All Time</li>
-        </ul>
-      </div>
-      <!-- <div class="filter-objects">
-        <p>Top</p>
-        <p class="select"><select class="budget">
-            <option value="" selected disabled>Select Object</option>
-            <option value="0">Gun</option>
-            <option value="1">Bike</option>
-          </select></p>
-        <p>finds</p>
-      </div> -->
+      <ul class="filter-order">
+        <li class="new-posts-filter active">
+          <i class="fa fa-clock"></i> Newest
+        </li>
+        <li class="hot-posts-filter">
+          <i class="fa fa-fire"></i>  Hot Posts
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -548,49 +528,36 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+  <script src="https://unpkg.com/@yaireo/tagify/dist/jQuery.tagify.min.js"></script>
   <script>
-    $(function () {
-      var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-      ];
-      $("#tag-search").autocomplete({
-        source: availableTags
+    var $input = $('input[name=tags]').tagify({
+      whitelist: [
+        { "id": 1, "value": "bike" },
+        { "id": 2, "value": "gun" },
+        { "id": 3, "value": "metal" },
+        { "id": 4, "value": "gold" },
+        { "id": 5, "value": "car" },
+        { "id": 6, "value": "fridge" },
+        { "id": 7, "value": "ring" },
+        { "id": 8, "value": "necklace" },
+        { "id": 9, "value": "knife" },
+        { "id": 10, "value": "katana" }
+      ],
+      delimiters: ',| '
+    })
+      .on('add', function (e, tagName) {
+        console.log('JQEURY EVENT: ', 'added', tagName)
+      })
+      .on("invalid", function (e, tagName) {
+        console.log('JQEURY EVENT: ', "invalid", e, ' ', tagName);
       });
-    });
 
-    $(function () {
-      var objectFindings = [
-        "Gun",
-        "Bike",
-        "Metal",
-        "Gold",
-        "Fridge"
-      ];
-      $("#object-search").autocomplete({
-        source: objectFindings
-      });
-    });
+    // get the Tagify instance assigned for this jQuery input object 
+    // so its methods could be accessed
+    var jqTagify = $input.data('tagify');
+
+    // bind the "click" event on the "remove all tags" button
+    // $('.tags-jquery--removeAllBtn').on('click', jqTagify.removeAllTags.bind(jqTagify))
   </script>
 
   <script>
@@ -609,22 +576,6 @@
         e.stopPropagation();
       });
 
-      $(".search-tab").click(function () {
-        if (!$(this).hasClass("active")) {
-          $(".search-tab").removeClass("active");
-          $(this).addClass("active");
-
-          if ($(this).attr("value") === "tagsearch") {
-            $(".input-wrapper").removeClass("active");
-            $(".tag-input-wrapper").addClass("active");
-          }
-          else if ($(this).attr("value") === "objectsearch") {
-            $(".input-wrapper").removeClass("active");
-            $(".object-input-wrapper").addClass("active");
-          }
-        }
-      });
-
       $(".hot-toggle").click(function () {
         if (!$(this).hasClass("on")) {
           $(this).addClass("on");
@@ -632,6 +583,18 @@
         else {
           $(this).removeClass("on");
         }
+      });
+
+      $(".new-posts-filter").click(function(){
+        $(".hot-posts-filter").removeClass("active");
+        $(".new-posts-filter").addClass("active");
+        $(".filter-order").removeClass("hot-active");
+      });
+
+      $(".hot-posts-filter").click(function(){
+        $(".new-posts-filter").removeClass("active");
+        $(".hot-posts-filter").addClass("active");
+        $(".filter-order").addClass("hot-active");
       });
     });
   </script>
